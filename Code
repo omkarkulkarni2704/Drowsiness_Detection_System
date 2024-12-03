@@ -1,6 +1,6 @@
 import cv2
 import dlib
-from scipy.spatial import distance
+from scipy.spatial import distance    
 
 
 def calculate_eye_aspect_ratio(eye):
