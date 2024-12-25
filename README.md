@@ -5,10 +5,10 @@
 
 ## Code
 
-import cv2 
-import dlib
-from scipy.spatial import distance
-def calculate_eye_aspect_ratio(eye):
+import cv2 <br>
+import dlib <br>
+from scipy.spatial import distance <br>
+def calculate_eye_aspect_ratio(eye): <br>
 
     # Vertical landmarks (y-coordinates) of the eye
     A = distance.euclidean(eye[1], eye[5])
