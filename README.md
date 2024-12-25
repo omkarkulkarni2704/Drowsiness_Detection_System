@@ -23,20 +23,20 @@ def calculate_eye_aspect_ratio(eye): <br>
 
 # Load face detector and facial landmark predictor
 
-detector = dlib.get_frontal_face_detector()
+detector = dlib.get_frontal_face_detector() <br>
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 
 # Define constants for eye aspect ratio and drowsiness thresholds
-EAR_THRESHOLD = 0.25
+EAR_THRESHOLD = 0.25 <br>
 CONSECUTIVE_FRAMES = 20
 
 # Initialize counters
-frame_counter = 0
+frame_counter = 0 <br>
 drowsy_frames = 0
 
 # Start video capture
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0) <br>
 while True:
 
     # Read a frame from the video
