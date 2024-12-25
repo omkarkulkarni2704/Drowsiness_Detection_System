@@ -8,13 +8,11 @@
 import cv2 
 import dlib
 from scipy.spatial import distance
-
-
 def calculate_eye_aspect_ratio(eye):
+
     # Vertical landmarks (y-coordinates) of the eye
     A = distance.euclidean(eye[1], eye[5])
     B = distance.euclidean(eye[2], eye[4])
-    
     # Horizontal landmark (x-coordinate) of the eye
     C = distance.euclidean(eye[0], eye[3])
     
@@ -24,6 +22,7 @@ def calculate_eye_aspect_ratio(eye):
 
 
 # Load face detector and facial landmark predictor
+
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 
@@ -36,13 +35,14 @@ frame_counter = 0
 drowsy_frames = 0
 
 # Start video capture
-cap = cv2.VideoCapture(0)
 
+cap = cv2.VideoCapture(0)
 while True:
+
     # Read a frame from the video
     ret, frame = cap.read()
     
-    if not ret:
+     if not ret:
         break
     
     # Convert the frame to grayscale
